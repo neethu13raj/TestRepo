@@ -12,8 +12,8 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    bat 'npx rim-raf allure-results'
-                    def status = bat(script: 'npx playwright test --reporter=html,allure-playwright', returnStatus: true)
+                   // bat 'npx rim-raf allure-results'
+                    def status = bat(script: 'npx playwright test --reporter=html', returnStatus: true)
                     if (status != 0) {
                         echo "Tests failed, but continuing to generate reports..."
                     }
@@ -26,7 +26,7 @@ pipeline {
         always {
             echo 'Generating Allure and HTML reports...'
 
-            bat 'npx allure generate allure-results --clean -o allure-report'
+           // bat 'npx allure generate allure-results --clean -o allure-report'
 
             publishHTML(target: [
                 reportDir: 'playwright-report',
