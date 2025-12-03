@@ -1,7 +1,7 @@
 import {test} from '@playwright/test'
 import data from '../testdata/redbus.json'
 
-test.only('Red bus scenario', async({page}) => {
+test('Red bus scenario', async({page}) => {
 
     
     await page.goto('https://www.redbus.in/')
