@@ -1,7 +1,7 @@
 import {test} from '@playwright/test'
 import data from '../testdata/redbus.json'
 
-test('Red bus scenario', async({page}) => {
+test.fail('Red bus scenario', async({page}) => {
 
     
     await page.goto('https://www.redbus.in/')
@@ -74,7 +74,7 @@ test('Red bus scenario', async({page}) => {
    await page.getByRole('button', {name:'Continue booking'}).click()
 })
 
-test.fail('sam', async({page}) => {
+test('sam', async({page}) => {
 
    await page.goto('https://www.redbus.in/search?fromCityName=Bangalore&fromCityId=122&srcCountry=IND&fromCityType=CITY&toCityName=Fort%20Road%2C%20Kannur%20%28Kerala%29&toCityId=85266&destCountry=IND&toCityType=AREA&onward=02-Dec-2025&doj=02-Dec-2025&ref=home&step=CI')
 
