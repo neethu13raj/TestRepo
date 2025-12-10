@@ -1,6 +1,6 @@
 import {test} from '@playwright/test'
 
-test('flight' , async({page}) => {
+    test(`samplescanerio ` , async({page}) => {
 
     await page.goto('https://www.flipkart.com/travel/flights?param=bds-2025-booknow&fm=neo%2Fmerchandising&iid=M_1787e5b3-a020-456d-87f0-4a1fe180e2ec_1_FHZQYK1YXK70_MC.9ODHZCZ094O6&cid=9ODHZCZ094O6')
     await page.locator('//input[@name="0-departcity"]').click()
@@ -29,7 +29,7 @@ test('flight' , async({page}) => {
         if(text.includes(target)){
             
            await item.click()
-            break;
+            //break;
         }
     }
 
@@ -42,11 +42,11 @@ test('flight' , async({page}) => {
     //     let text = await place_locator.nth(i).textContent()
       
     //     if(text.includes(target)){
-    //         await place_locator.nth(i).click()
     //         break;
     //     }
     // }
 
 
 })
+
 
